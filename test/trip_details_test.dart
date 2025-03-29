@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 import 'package:group_escape/pages/trip_details.dart';
@@ -67,7 +66,7 @@ void main() {
             tripId: "123",
             tripName: "test123",
             availability: mockAvailability,
-            locations: ['Seattle', 'Frankfurt'],
+            locations: const ['Seattle', 'Frankfurt'],
             db: fS,
             isCreator: true,
             userId: '123',

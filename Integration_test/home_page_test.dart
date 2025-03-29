@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:group_escape/firebase_options.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:group_escape/pages/home_page.dart';
 import 'package:group_escape/main.dart' as app;
 
 void main() {

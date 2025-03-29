@@ -1,7 +1,6 @@
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:group_escape/models/trip_model.dart';
 import 'package:group_escape/util/availability.dart';
@@ -12,7 +11,7 @@ void main() {
 
       //setup
       final userIds = ['user1', 'user2'];
-      final tripName = 'test';
+      const tripName = 'test';
       final locations = ['seattle'];
       final availability = [
         Availability(

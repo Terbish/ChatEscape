@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:group_escape/pages/create_trip.dart';
 import 'package:group_escape/services/firestore_service.dart';
 import 'package:group_escape/shared/firebase_authentication.dart';
-import 'package:intl/intl.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'create_trip_test.mocks.dart';

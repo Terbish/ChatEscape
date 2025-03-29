@@ -7,8 +7,8 @@ import 'package:group_escape/util/availability.dart';
 
 class FirestoreService {
   final FirebaseFirestore _db;
-  FirebaseMessaging? _messaging;
-  PushNotifications? _pushNotifications;
+  final FirebaseMessaging? _messaging;
+  final PushNotifications? _pushNotifications;
 
 
   FirestoreService({FirebaseFirestore? fS, FirebaseMessaging? fM, PushNotifications? pN}):

@@ -3,7 +3,6 @@ import 'package:firebase_auth_mocks/firebase_auth_mocks.dart';
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:group_escape/shared/firebase_authentication.dart';
-import 'package:mockito/mockito.dart';
 import 'package:mock_exceptions/mock_exceptions.dart';
 
 
@@ -20,7 +19,7 @@ void main() {
     testWidgets('CurrentUser test', (WidgetTester tester) async {
       final auth = MockFirebaseAuth(mockUser: user, signedIn: true);
       final firestore = FakeFirebaseFirestore();
-      FirebaseAuthentication firebase = await FirebaseAuthentication(
+      FirebaseAuthentication firebase = FirebaseAuthentication(
           auth, firestore);
       final uid = firebase.currentUser();
       expect(uid, 'test_uid');
@@ -29,7 +28,7 @@ void main() {
     testWidgets('successful login test', (WidgetTester tester) async {
       final auth = MockFirebaseAuth(mockUser: user, signedIn: false);
       final firestore = FakeFirebaseFirestore();
-      FirebaseAuthentication firebase = await FirebaseAuthentication(auth, firestore);
+      FirebaseAuthentication firebase = FirebaseAuthentication(auth, firestore);
       final uid = await firebase.login('test@gmail.com', 'password');
       expect(uid, 'test_uid');
     });
@@ -37,7 +36,7 @@ void main() {
     testWidgets('unsuccessful login test', (WidgetTester tester) async {
       final auth = MockFirebaseAuth(mockUser: user, signedIn: false);
       final firestore = FakeFirebaseFirestore();
-      FirebaseAuthentication firebase = await FirebaseAuthentication(
+      FirebaseAuthentication firebase = FirebaseAuthentication(
           auth, firestore);
 
       whenCalling(Invocation.method(#signInWithEmailAndPassword, null))
@@ -52,7 +51,7 @@ void main() {
     testWidgets('successful createUser test', (WidgetTester tester) async {
       final auth = MockFirebaseAuth(mockUser: user, signedIn: false);
       final firestore = FakeFirebaseFirestore();
-      FirebaseAuthentication firebase = await FirebaseAuthentication(auth, firestore);
+      FirebaseAuthentication firebase = FirebaseAuthentication(auth, firestore);
       final uid = await firebase.createUser('test@gmail.com', 'password');
       expect(uid, isA<String>());
     });
@@ -60,7 +59,7 @@ void main() {
     testWidgets('unsuccessful createUser test', (WidgetTester tester) async {
       final auth = MockFirebaseAuth(mockUser: user, signedIn: false);
       final firestore = FakeFirebaseFirestore();
-      FirebaseAuthentication firebase = await FirebaseAuthentication(
+      FirebaseAuthentication firebase = FirebaseAuthentication(
           auth, firestore);
 
       whenCalling(Invocation.method(#createUserWithEmailAndPassword, null))

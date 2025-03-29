@@ -5,7 +5,7 @@ import '../shared/firebase_authentication.dart';
 class JoinTripDialog extends StatefulWidget {
   final FirestoreService firestoreService;
   final FirebaseAuthentication authInstance;
-  JoinTripDialog(this.firestoreService, this.authInstance, {super.key});
+  const JoinTripDialog(this.firestoreService, this.authInstance, {super.key});
 
   @override
   _JoinTripDialogState createState() => _JoinTripDialogState();

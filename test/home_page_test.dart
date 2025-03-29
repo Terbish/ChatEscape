@@ -1,9 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:group_escape/pages/home_page.dart';
-import 'package:group_escape/pages/login_screen.dart';
-import 'package:group_escape/pages/trip_details.dart';
 import 'package:mockito/mockito.dart';
 
 import 'create_trip_test.mocks.dart';
@@ -14,7 +11,7 @@ main() {
     testWidgets('test log out button', (WidgetTester tester) async {
       // Build the LoginScreen widget
       bool gotCalled = false;
-      final logOut = () {gotCalled = true;};
+      logOut() {gotCalled = true;}
 
       final MockFirebaseAuthentication firebaseInstance = MockFirebaseAuthentication();
       final MockFirestoreService fS = MockFirestoreService();
@@ -69,7 +66,7 @@ main() {
     testWidgets('Test Pop up menu', (WidgetTester tester) async {
       // Build the LoginScreen widget
       bool gotCalled = false;
-      final logOut = () {gotCalled = true;};
+      logOut() {gotCalled = true;}
 
       final MockFirebaseAuthentication firebaseInstance = MockFirebaseAuthentication();
       final MockFirestoreService fS = MockFirestoreService();

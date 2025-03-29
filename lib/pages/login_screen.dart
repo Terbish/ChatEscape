@@ -119,13 +119,13 @@ class _LoginScreenState extends State<LoginScreen> {
     String btnText = _isLogin ? 'Log in' : 'Sign Up';
     return Padding(
         padding: const EdgeInsets.only(top: 128),
-        child: Container(
+        child: SizedBox(
             height: 60,
             child: ElevatedButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(
+                backgroundColor: WidgetStateProperty.all(
                     Theme.of(context).primaryColorLight),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24.0),
                       side: const BorderSide(color: Colors.black)),

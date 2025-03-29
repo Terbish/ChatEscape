@@ -163,7 +163,7 @@ class _CreateTripState extends State<CreateTrip> {
 
   Widget _buildSelectedDatesText() {
     return Text(
-      'Selected Dates:\n${DateFormat('MM/dd/yyyy').format(_startDate!)} to ${DateFormat('MM/dd/yyyy').format(_endDate!)}',
+      'Selected Dates:\n${DateFormat('MM/dd/yyyy').format(_startDate)} to ${DateFormat('MM/dd/yyyy').format(_endDate)}',
       style: const TextStyle(fontSize: 16.0),
     );
   }

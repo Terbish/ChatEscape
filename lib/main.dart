@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:group_escape/pages/home_page.dart';
 import 'package:group_escape/pages/login_screen.dart';
 import 'package:group_escape/services/push_notifications.dart';
 import 'package:group_escape/shared/firebase_authentication.dart';
